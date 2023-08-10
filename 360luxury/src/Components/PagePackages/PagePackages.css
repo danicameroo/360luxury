@@ -1,0 +1,49 @@
+.Packages{
+    background: url(../../Images/PackagesImg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 500px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titlePackages{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 100px;
+    text-align: center;
+}
+.textPackages{
+    width: 784px;
+    height: 164px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Baskerville Old Face;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.containerPackages{
+    background: url(../../Images/Pack.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.titleContainerPackages{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-align: center;
+    padding-top: 70px;
+}

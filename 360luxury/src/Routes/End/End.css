@@ -1,0 +1,17 @@
+.End{
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.textEnd{
+    color: #ffffffb2;
+    font-family: Baskervville;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

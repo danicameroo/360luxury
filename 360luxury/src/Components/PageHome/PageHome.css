@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'Neothic';
+    src: url('../../Fonts/neothic/Neothic.ttf');
+}
+
+.ImageOne{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.containerTextPageHome{
+    display: block;
+    text-align: center;
+    height: 300px;
+}
+.titleContainerPageHome{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 56px;
+    margin-bottom: 0;
+}
+.textContainerPageHome{
+    color: #FFF;
+    font-family: Satisfy;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+.buttonContainerPageHome{
+    width: 171px;
+    height: 59px;
+    flex-shrink: 0;
+    border-radius: 45px;
+    background: #FFF;
+    margin-top: 40px;
+    margin-bottom: 72px;
+}
+.buttonContainerPageHome:hover{
+    background: #E32929;
+}
+.textButtonContainerPageHome{
+    color: #000;
+    font-family: Baskervville;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+}
+.ImageTwo{
+    width: 100%;
+    height: auto;
+}
+.textImageTwo{
+    position: absolute;
+    z-index: 100;
+    top: 1300px;
+    left: 180px;
+    width: 1218px;
+    height: auto;
+    color: #FFF;
+    font-family: Baskervville;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.containerPackages{
+    height: 1080px;
+    background: url('../../Images/bgPink.png');
+}
+.containerPackagesImg{
+    padding-top: 50px;
+    display: grid;
+    justify-content: center;
+}
+.Arrow{
+    position: absolute;
+}
+.ArrowLeft{
+    top: 1820px;
+    left: 350px;
+}
+.ArrowRight{
+    top: 1780px;
+    right: 350px;
+}
+.textPackages{
+    margin-bottom: 0;
+    margin: auto;
+}
+.Packages{
+    margin-top: 0;
+    margin: auto;
+}
+.containerPackagesButton{
+    padding-top: 50px;
+    display: grid;
+    justify-content: center;
+}
+.packagesButton{
+    width: 788px;
+    height: 154px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background-color: #00000085;
+    transition: background-color 0.5s;
+    margin: 30px;
+    border: none;
+}
+.packagesButton:hover{
+    background-color: #000000c5;
+}
+.packagesButtonText{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.containerWhyUs{
+    height: 1250px;
+    background: url('../../Images/image3.png');
+    display: flex;
+    align-items: flex-end;
+}
+.textWhyUs{
+    display: block;
+    margin-bottom: 450px;
+    margin-left: 150px;
+}
+.titleContainerWhyUS{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0;
+}
+.textContainerWhyUs{
+    margin-top: 0;
+    color: #FFF;
+    font-family: Baskervville;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 538px;
+    flex-shrink: 0;
+}
+.containerAllIcon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5%;
+    position: absolute;
+    left: 300px;
+}
+.containerIcon{
+    width: 303px;
+    height: 403px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #060606;
+    box-shadow: 5px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    align-items: center;
+}
+.iconContainerIcon{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.titleContainerIcon{
+    width: 219px;
+    height: 32px;
+    flex-shrink: 0;
+    margin: auto;
+    color: #FFF;
+    text-align: center;
+    font-family: Neothic;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 26px;
+}
+.textContainerIcon{
+    width: 219px;
+    height: 184px;
+    flex-shrink: 0;
+    margin: auto;
+    color: #FFF;
+    text-align: center;
+    font-family: Baskervville;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.containerExperiences{
+    display: block;
+    justify-content: center;
+    padding-top: 60px;
+}
+.titleContainerExperiences{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+.imagesContainerExperiences{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.imgExperiences{
+    width: 695px;
+    height: 784px;
+    flex-shrink: 0;
+    margin: 10px;
+}
+.containerButtonExperiences{
+    display: flex;
+    justify-content: center;
+}
+.buttonImgExperiences{
+    background: none;
+    border: none;
+}
+.textImgExperiences{
+    text-align: center;
+    color: #FFF;
+    font-family: Baskervville;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: underline;
+}
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+.titleContainerCarousel{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.titleContainerExperiences {
+    font-size: 24px;
+    margin-bottom: 20px;
+}  
+.carouselImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}  
+.carouselImages img {
+    width: 700px; /* Ancho de 700px para cada imagen */
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    opacity: 0.5; /* Aplica opacidad a todas las imágenes */
+    transition: opacity 0.3s ease-in-out;
+}  
+.carouselImages img.center {
+    opacity: 1; /* La imagen en el centro se muestra con opacidad completa */
+    z-index: 2; /* La imagen en el centro se coloca al frente */
+}  
+.carouselImages img.side {
+    opacity: 0.5; /* Las imágenes laterales se muestran con opacidad reducida */
+    z-index: 1; /* Las imágenes laterales se colocan detrás */
+}  
+.carouselImages img.prev {
+    transform: translateX(-50%) scale(0.9); /* Escala ligeramente reducida y centrada horizontalmente */
+    top: 10%;
+    left: 25%;
+}  
+.carouselImages img.next {
+    transform: translateX(50%) scale(0.9); /* Escala ligeramente reducida y centrada horizontalmente */
+    top: 10%;
+    right: 25%;
+}  
+.carouselButtons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 850px;
+    z-index: 2;
+}  
+.carouselButtons button {
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+}
+.arrowCarousel{
+    width: 50px !important;
+    height: auto !important;
+}
+.arrowCarousel.Rotate{
+    transform: scaleX(-1);
+}
