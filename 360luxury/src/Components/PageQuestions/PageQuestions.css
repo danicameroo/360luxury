@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@font-face {
+    font-family: 'Neothic';
+    src: url('../../Fonts/neothic/Neothic.ttf');
+}
+
+.questionsTitle{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+.containerQuestions{
+    width: 1011px;
+    height: 252px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    margin: auto;
+}
+.containerQuestions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.titleQuestions{
+    color: #000;
+    font-family: Neothic;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+    width: 664px;
+    
+}
+.textQuestions{
+    color: #000;
+    font-family: 'Libre Baskerville', serif, Old Face;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 664px;
+}

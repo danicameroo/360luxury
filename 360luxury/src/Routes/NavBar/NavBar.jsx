@@ -11,8 +11,8 @@ const NavBar = () => {
                     <Link className='linkNav' to='/'><li className='listNav'>Home</li></Link>
                     <Link className='linkNav' to='/aboutUs'><li className='listNav'>About Us</li></Link>
                     <Link className='linkNav' to='/packages'><li className='listNav'>Packages</li></Link>
-                    <Link className='linkNav' to='/categoria/Romance'><li className='listNav'>Book Now!</li></Link>
-                    <Link className='linkNav' to='/categoria/Romance'><li className='listNav'>FAQ's</li></Link>
+                    <Link className='linkNav' to='/booking'><li className='listNav'>Book Now!</li></Link>
+                    <Link className='linkNav' to='/FAQs'><li className='listNav'>FAQ's</li></Link>
                 </ul>
             </div>
         </div>

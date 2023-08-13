@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@font-face {
+    font-family: 'Neothic';
+    src: url('../../Fonts/neothic/Neothic.ttf');
+}
+
 .Packages{
     background: url(../../Images/PackagesImg.png);
     background-repeat: no-repeat;
@@ -8,6 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15px;
 }
 .titlePackages{
     color: #FFF;
@@ -16,7 +23,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-top: 100px;
+    padding-top: 50px;
     text-align: center;
 }
 .textPackages{
@@ -25,16 +32,18 @@
     flex-shrink: 0;
     color: #FFF;
     text-align: center;
-    font-family: Baskerville Old Face;
+    font-family: 'Libre Baskerville', serif, Old Face;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: auto;
 }
 .containerPackages{
     background: url(../../Images/Pack.png);
     background-repeat: no-repeat;
     background-size: auto;
+    height: auto;
 }
 .titleContainerPackages{
     color: #FFF;
@@ -45,5 +54,122 @@
     line-height: normal;
     margin: 0;
     text-align: center;
-    padding-top: 70px;
+    padding: 35px;
+}
+.containerBasic{
+    background: url(../../Images/basicBg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1728px;
+    height: 752px;
+    flex-shrink: 0;
+    gap: 100px;
+}
+.imgBasic{
+    width: 573px;
+    height: 573px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.titleBasic{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+    margin-bottom: 10PX;
+}
+.textBasic{
+    width: 581px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Libre Baskerville', serif;;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.listBasic{
+    width: 581px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Libre Baskerville', serif;;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style: none;
+    padding: 0;
+}
+.priceBasic{
+    color: #FFF;
+    font-family: 'Libre Baskerville', serif;;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.containerPremium{
+    background: url(../../Images/premiumBg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1728px;
+    height: 752px;
+    flex-shrink: 0;
+    gap: 100px;
+}
+.premium{
+    text-align: right;
+}
+.imgPremium{
+    width: 665px;
+    height: 582px;
+    flex-shrink: 0;
+    margin-right: 100px;
+}
+.containerDeluxe{
+    background: url(../../Images/deluxeBg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1728px;
+    height: 752px;
+    flex-shrink: 0;
+    gap: 100px;
+}
+.containerEndPackages{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+.textEndPackages{
+    width: 784px;
+    height: 164px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif, Old Face;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
 }

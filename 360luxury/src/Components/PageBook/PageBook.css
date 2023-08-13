@@ -1,0 +1,68 @@
+.pageBook{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../../Images/bookBg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 2789px;
+}
+.titleBook{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+.ContainerCarouselBook{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ContainerBook{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1334px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #000;
+}
+.testBookCarousel{
+    color: #FFF;
+    font-family: Baskervville;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 487px;
+    height: 432px;
+    flex-shrink: 0;
+}
+.arrowBookCarousel{
+    width: 50px !important;
+    height: auto !important;
+    transition: width 0.5s !important;
+}
+.arrowBookCarousel:hover{
+    width: 55px !important;
+}
+.arrowBookCarousel.RotateBook{
+    transform: scaleX(-1);
+}
+.videoBook{
+    justify-content: center;
+    margin: auto;
+}
+.titleForm{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}

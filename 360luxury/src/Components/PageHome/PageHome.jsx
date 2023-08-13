@@ -3,12 +3,13 @@ import imageTwo from '../../Images/image2.png'
 import ArrowLeft from '../../Images/ArrowLeft.png'
 import ArrowRight from '../../Images/ArrowRight.png'
 import textPackages from '../../Images/textPackages.png'
-import Packages from '../../Images/Packages.png'
+import Package from '../../Images/Packages.png'
 import Reloj from '../../Images/iconHome1.png'
 import ArrowCarousel from '../../Images/ArrowCarousel.svg'
 import { imagesExperiences, imagesCarousel } from '../../data'
 import './PageHome.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const PageHome = () => {
     const [visibleImages, setVisibleImages] = useState(4);
@@ -26,29 +27,39 @@ const PageHome = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesCarousel.length);
     };
 
+    const ScrollToBasic = () => {
+        window.location.href = '/packages?scrollOnLoadBasic=true';
+    };
+    const ScrollToPremium = () => {
+        window.location.href = '/packages?scrollOnLoadPremium=true';
+    };
+    const ScrollToDeluxe = () => {
+        window.location.href = '/packages?scrollOnLoadDeluxe=true';
+    };
+
     return (
         <div>
             <img src={imageOne} alt='' className='ImageOne' />
             <div className='containerTextPageHome'>
                 <h1 className='titleContainerPageHome'>360 Luxury photo booth experience</h1>
                 <p className='textContainerPageHome'>“We elevate your experience to the next level” </p>
-                <button className='buttonContainerPageHome'><p className='textButtonContainerPageHome'>Book Now!</p></button>
+                <Link to="./booking"><button className='buttonContainerPageHome'><p className='textButtonContainerPageHome'>Book Now!</p></button></Link>
             </div>
             <div>
                 <img src={imageTwo} alt="" className='ImageTwo'/>
-                <p className='textImageTwo'>Welcome to the 360 Luxury Productions experience! We do more than just capture moments; we transport you to a world of luxury and excitement. Our tagline, "We take your experience to the next level," emphasizes our commitment to creating unforgettable memories that transcend the ordinary. As a leading luxury experience-based company, we don't just sell a service; we create an extraordinary journey for you and your guests. Our innovative approach sets us apart, introducing fresh ideas that breathe new life into the market. When you choose us, you're not just renting a 360 photo booth - you're immersing yourself in an extravagant affair complete with interactive LED props and studio-quality lighting. From glamorous galas to intimate gatherings, our 360 photo booth will elevate every event, leaving a endless smiles and cherished memories for you and your gests. We pride ourselves on providing the perfect union of sophistication and entertainment, ensuring that your celebration becomes the talk of the year. Ready to embark on this remarkable experience with us? Take a moment to explore the possibilities that await you in our "Packages" section.</p>
+                <p className='textImageTwoPack'>Welcome to the 360 Luxury Productions experience! We do more than just capture moments; we transport you to a world of luxury and excitement. Our tagline, "We take your experience to the next level," emphasizes our commitment to creating unforgettable memories that transcend the ordinary. As a leading luxury experience-based company, we don't just sell a service; we create an extraordinary journey for you and your guests. Our innovative approach sets us apart, introducing fresh ideas that breathe new life into the market. When you choose us, you're not just renting a 360 photo booth - you're immersing yourself in an extravagant affair complete with interactive LED props and studio-quality lighting. From glamorous galas to intimate gatherings, our 360 photo booth will elevate every event, leaving a endless smiles and cherished memories for you and your gests. We pride ourselves on providing the perfect union of sophistication and entertainment, ensuring that your celebration becomes the talk of the year. Ready to embark on this remarkable experience with us? Take a moment to explore the possibilities that await you in our "Packages" section.</p>
             </div>
-            <div className='containerPackages'>
-                <div className='containerPackagesImg'>
+            <div className='containerPackage'>
+                <div className='containerPackageImg'>
                     <img src={ArrowLeft} alt="" className='ArrowLeft Arrow'/>
                     <img src={ArrowRight} alt="" className='ArrowRight Arrow'/>
-                    <img src={textPackages} alt="" className='textPackages'/>
-                    <img src={Packages} alt="" className='Packages'/>
+                    <img src={textPackages} alt="" className='textPackage'/>
+                    <img src={Package} alt="" className='Package'/>
                 </div>
                 <div className='containerPackagesButton'>
-                    <button className='packagesButton'><p className='packagesButtonText'>Basic package</p></button>
-                    <button className='packagesButton'><p className='packagesButtonText'>Premium package</p></button>
-                    <button className='packagesButton'><p className='packagesButtonText'>Deluxe package</p></button>
+                    <button className='packagesButton' onClick={ScrollToBasic}><p className='packagesButtonText'>Basic package</p></button>
+                    <button className='packagesButton' onClick={ScrollToPremium}><p className='packagesButtonText'>Premium package</p></button>
+                    <button className='packagesButton'onClick={ScrollToDeluxe}><p className='packagesButtonText'>Deluxe package</p></button>
                 </div>
             </div>
             <div className='containerWhyUs'>
