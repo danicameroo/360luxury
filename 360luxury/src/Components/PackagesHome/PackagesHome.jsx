@@ -6,7 +6,7 @@ import './PackagesHome.css'
 
 const PackagesHome = () => {
     const ScrollToBasic = () => {
-        window.location.href = '/packages?scrollOnLoadBasic=true';
+        window.location.href = '/packages?scrollOnLoadBasic===true';
     };
     const ScrollToPremium = () => {
         window.location.href = '/packages?scrollOnLoadPremium=true';
