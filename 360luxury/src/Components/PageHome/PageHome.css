@@ -59,15 +59,18 @@
     padding: 0;
     margin: 0;
 }
-.ImageTwo{
+.containerImgHome{
     width: 100%;
-    height: auto;
+    height: 675px;
+    flex-shrink: 0;
+    background: url('../../Images/image2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .textImageTwoPack{
-    position: absolute;
-    z-index: 100;
-    top: 1200px;
-    left: 180px;
     width: 1218px;
     height: auto;
     color: #FFF;
@@ -77,70 +80,20 @@
     font-weight: 400;
     line-height: normal;
 }
-.containerPackage{
-    height: 1080px;
-    background: url('../../Images/bgPink.png');
-}
-.containerPackageImg{
-    padding-top: 50px;
-    display: grid;
-    justify-content: center;
-}
-.Arrow{
-    position: absolute;
-}
-.ArrowLeft{
-    top: 1820px;
-    left: 350px;
-}
-.ArrowRight{
-    top: 1780px;
-    right: 350px;
-}
-.textPackage{
-    margin-bottom: 0;
-    margin: auto;
-}
-.Package{
-    margin-top: 0;
-    margin: auto;
-}
-.containerPackagesButton{
-    padding-top: 50px;
-    display: grid;
-    justify-content: center;
-}
-.packagesButton{
-    width: 788px;
-    height: 154px;
-    flex-shrink: 0;
-    border-radius: 100px;
-    background-color: #00000085;
-    transition: background-color 0.5s;
-    margin: 30px;
-    border: none;
-}
-.packagesButton:hover{
-    background-color: #000000c5;
-}
-.packagesButtonText{
-    color: #FFF;
-    font-family: Neothic;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 .containerWhyUs{
-    height: 1250px;
+    width: 100%;
+    height: 1204px;
+    flex-shrink: 0;
     background: url('../../Images/image3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
 }
 .textWhyUs{
     display: block;
-    margin-bottom: 450px;
-    margin-left: 150px;
+    margin: 110px;
 }
 .titleContainerWhyUS{
     color: #FFF;
@@ -167,8 +120,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 5%;
-    position: absolute;
-    left: 300px;
+    justify-content: center;
 }
 .containerIcon{
     width: 303px;
@@ -272,8 +224,13 @@
     line-height: normal;
 }
 .titleContainerExperiences {
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 90px;
 }  
 .carouselImages {
     display: flex;

@@ -1,0 +1,59 @@
+.containerPackage{
+    height: 1080px;
+    width: 100%;
+    background: url('../../Images/bgPink.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.containerPackageImg{
+    padding-top: 50px;
+    display: grid;
+    justify-content: center;
+}
+.arrowContainer{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 850px;
+    z-index: 2;
+}
+.Rotate{
+    transform: scaleX(-1);
+}
+.textPackage{
+    margin-bottom: 0;
+    margin: auto;
+}
+.Package{
+    margin-top: 0;
+    margin: auto;
+}
+.containerPackagesButton{
+    padding-top: 50px;
+    display: grid;
+    justify-content: center;
+}
+.packagesButton{
+    width: 788px;
+    height: 154px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background-color: #00000085;
+    transition: background-color 0.5s;
+    margin: 30px;
+    border: none;
+}
+.packagesButton:hover{
+    background-color: #000000c5;
+}
+.packagesButtonText{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

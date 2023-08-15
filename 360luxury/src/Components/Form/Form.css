@@ -136,3 +136,28 @@
   padding: 0;
   margin: 0;
 }
+.has-value{
+  color: #000;
+  font-family: Baskervville;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+input[type="text" i] {
+  padding-left: 20px;
+}
+input[type="email" i] {
+  padding-left: 20px;
+}
+option{
+  color: #000;
+  font-family: Baskervville;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px;
+}

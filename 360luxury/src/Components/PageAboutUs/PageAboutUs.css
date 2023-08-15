@@ -6,11 +6,11 @@
 }
 
 .PageAboutUs{
-    background: url(../../Images/imgAboutUs.png);
+    background: url(../../Images/aboutUsBG.png);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100% 100%;
     width: 100%;
-    height: 2235px;
+    height: 2071px;
     flex-shrink: 0;
     justify-content: center;
     margin-top: 15px;

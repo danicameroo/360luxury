@@ -1,4 +1,4 @@
-@media (min-width: 1225px) {
+
     .MenuNav{
         display: flex;
         flex-direction: row;
@@ -35,4 +35,3 @@
         font-weight: 400;
         line-height: normal;
     }
-}
