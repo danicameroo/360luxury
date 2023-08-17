@@ -1,0 +1,51 @@
+.containerExperiences{
+    display: block;
+    justify-content: center;
+    padding-top: 60px;
+    transform: translateY(30%);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+.containerExperiences.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.titleContainerExperiences{
+    color: #FFF;
+    font-family: Neothic;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+.imagesContainerExperiences{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.imgExperiences{
+    width: 695px;
+    height: 784px;
+    flex-shrink: 0;
+    margin: 10px;
+}
+.containerButtonExperiences{
+    display: flex;
+    justify-content: center;
+}
+.buttonImgExperiences{
+    background: none;
+    border: none;
+}
+.textImgExperiences{
+    text-align: center;
+    color: #FFF;
+    font-family: 'Libre Baskerville', serif;;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: underline;
+}

@@ -101,3 +101,12 @@
     line-height: normal;
     text-align: center;
 }
+.containerFormAnimation{
+    transform: translateY(30%);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+
+.containerFormAnimation.active{
+    opacity: 1;
+    transform: translateY(0);
+}

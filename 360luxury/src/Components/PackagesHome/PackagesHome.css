@@ -1,9 +1,15 @@
 .containerPackage{
-    height: 1080px;
+    height: 1102px;
     width: 100%;
     background: url('../../Images/bgPink.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    transform: translateY(30%);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+.containerPackage.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 .containerPackageImg{
     padding-top: 50px;

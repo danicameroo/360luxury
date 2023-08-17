@@ -5,6 +5,7 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        height: 98px;
     }
     .imgNav{
         width: 283px;
@@ -26,12 +27,18 @@
     }
     .linkNav{
         text-decoration: none;
+        color: #FFFFFF;
     }
     .listNav{
-        color: #FFFFFF;
         font-family: Baskervville;
         font-size: 26px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
+    .listNav.active {
+        color: red;
+        text-decoration: underline;
+    }
+
+

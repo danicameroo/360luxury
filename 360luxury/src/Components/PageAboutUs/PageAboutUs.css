@@ -5,6 +5,29 @@
     src: url('../../Fonts/neothic/Neothic.ttf');
 }
 
+.ContainerPageAboutUs{
+    position: relative;
+    overflow: hidden;
+}
+.ContainerPageAboutUs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+    animation: revealBackground 2s ease forwards;
+}
+@keyframes revealBackground {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 .PageAboutUs{
     background: url(../../Images/aboutUsBG.png);
     background-repeat: no-repeat;

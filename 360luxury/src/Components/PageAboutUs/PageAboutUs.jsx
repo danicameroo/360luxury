@@ -2,7 +2,8 @@ import './PageAboutUs.css'
 
 const PageAboutUs = () => {
     return(
-        <div className="PageAboutUs"> 
+        <div className='ContainerPageAboutUs'>
+        <div className='PageAboutUs'> 
         <div>
             <h2 className='titleAboutUs'>Who are we?</h2>
             <div className='containerTextAboutUs'>
@@ -26,6 +27,7 @@ const PageAboutUs = () => {
                     <p className='textAboutUs'>Our main focus is to provide the most luxurious-based experience possible, where each interaction is distinguished by excellent taste, originality, and attention to detail. We are memory architects, creating moments that will bring joy to you and your loved ones during a lifetime. We make sure that every event turns into a priceless celebration of life with the help of our creative LED props, studio-quality lighting and dedication.<br/>At 360 Luxury Productions, we constantly generate original concepts that set us apart from the competition. We thrive on originality. We work hard to make sure that each event is special and unforgettable, captivating you and your guests.</p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

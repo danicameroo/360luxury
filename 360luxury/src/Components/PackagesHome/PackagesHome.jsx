@@ -3,8 +3,15 @@ import ArrowRight from '../../Images/ArrowRight.png'
 import textPackages from '../../Images/textPackages.png'
 import Package from '../../Images/Packages.png'
 import './PackagesHome.css'
+import { useInView } from 'react-intersection-observer';
 
 const PackagesHome = () => {
+        const [ref, inView] = useInView({
+            triggerOnce: true,
+        });
+
+    const isInView = inView || false;
+
     const ScrollToBasic = () => {
         window.location.href = '/packages?scrollOnLoadBasic===true';
     };
@@ -16,7 +23,7 @@ const PackagesHome = () => {
     };
 
     return(
-        <div className='containerPackage'>
+        <div className={`containerPackage ${isInView ? 'active' : ''}`} ref={ref}>
                 <div className='containerPackageImg'>
                     <div className='arrowContainer'>
                         <img src={ArrowRight} alt="" className='Rotate'/>
