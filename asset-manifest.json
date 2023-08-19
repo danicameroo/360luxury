@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/360luxury/static/css/main.c0649b8a.css",
+    "main.css": "/360luxury/static/css/main.342e1995.css",
     "main.js": "/360luxury/static/js/main.70beec5a.js",
     "static/js/787.f563dd6c.chunk.js": "/360luxury/static/js/787.f563dd6c.chunk.js",
     "static/media/Carrusel2.jpg": "/360luxury/static/media/Carrusel2.3ca6072ddb579e3f7ddb.jpg",
@@ -32,12 +32,12 @@
     "static/media/ArrowCarousel.svg": "/360luxury/static/media/ArrowCarousel.b9c0ff9354e4d1d3a7eaf2bb2991613a.svg",
     "static/media/ArrowSmallIcon.svg": "/360luxury/static/media/ArrowSmallIcon.439891875ab7a28ada3d87e8201d598f.svg",
     "static/media/LineVerticalFooter.svg": "/360luxury/static/media/LineVerticalFooter.034a6ef3afc3a16f9d9de042dc8fc022.svg",
-    "main.c0649b8a.css.map": "/360luxury/static/css/main.c0649b8a.css.map",
+    "main.342e1995.css.map": "/360luxury/static/css/main.342e1995.css.map",
     "main.70beec5a.js.map": "/360luxury/static/js/main.70beec5a.js.map",
     "787.f563dd6c.chunk.js.map": "/360luxury/static/js/787.f563dd6c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0649b8a.css",
+    "static/css/main.342e1995.css",
     "static/js/main.70beec5a.js"
   ]
 }
