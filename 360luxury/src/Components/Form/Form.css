@@ -78,6 +78,11 @@
   flex-shrink: 0;
   border-radius: 15px;
   background: #FFF;
+  color: #000;
+}
+.selectsPack:hover{
+  background: #000;
+  color: white;
 }
 .description{
   height: 116px;
@@ -112,6 +117,8 @@
 }
 .options{
   padding-left: 20px;
+  color: white;
+  margin: 100px;
 }
 .containerButtonBook{
   display: flex;
@@ -125,9 +132,12 @@
   border-radius: 35px;
   border: none;
   background: linear-gradient(90deg, #FA0207, #7B1F2F);
+  color: #FFF;
+}
+.buttonBook:hover{
+  background: linear-gradient(90deg, #F13514, #C65173);
 }
 .textButtonBook{
-  color: #FFF;
   font-family: Baskervville;
   font-size: 24px;
   font-style: normal;
@@ -160,4 +170,372 @@ option{
   font-weight: 400;
   line-height: normal;
   padding: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+  .containerForm{
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    justify-content: center;
+    margin: auto;
+  }
+  .inputsOne{
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .inputForm{
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+  }
+  .containerFormTwo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .containerFormPartOne{
+    display: flex;
+    flex-direction: column;
+    width: 76px;
+    gap: 9px;
+  
+  }
+  .react-datepicker-wrapper {
+    color: #000;
+    background-color: #fff;
+    width: 76px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+  }
+  .dateContainer{
+    display: flex;
+    flex-direction: row;
+    width: 76px;
+    height: 27px;
+  }
+  .imgDate{
+    height: auto;
+  }
+  .linesDate{
+    width: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .lines{
+    letter-spacing: 2px;
+    color: #000;
+    font-family: Baskervville;
+    font-size: 6px;
+  }
+  .containerImgCalender{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+  }
+  .imgCalender{
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+  }
+  .selectsPack{
+    width: 76px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    color: #00000073;
+    font-size: 6px;
+    font-weight: 100px;
+  }
+  .selectsPack:hover{
+    background: #000;
+    color: white;
+  }
+  .description{
+    height: 55px;
+  }
+  .containerFormPartTwo{
+    display: flex;
+    flex-direction: column;
+    width: 159px;
+    gap: 9px;
+  }
+  .selectsContainer{
+    width: 159px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .selectRes{
+    height: 24px !important;
+  }
+  .selects{
+    width: 47px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    font-size: 6px;
+  }
+  ::placeholder {
+    padding-left: 9px;
+    font-size: 6px;
+  }
+  .description::placeholder {
+    padding-left: 2px;
+    text-align: left;
+    vertical-align: top;
+    line-height: normal;
+  }
+  .options{
+    padding-left: 9px;
+    color: white;
+    margin: 100px;
+  }
+  .containerButtonBook{
+    display: flex;
+    justify-content: center;
+    margin-top: 49px;
+    margin-bottom: 53px;
+  }
+  .buttonBook{
+    width: 84px;
+    height: 29px;
+    border-radius: 35px;
+    border: none;
+    background: linear-gradient(90deg, #FA0207, #7B1F2F);
+    color: #FFF;
+  }
+  .buttonBook:hover{
+    background: linear-gradient(90deg, #F13514, #C65173);
+  }
+  .textButtonBook{
+    font-family: Baskervville;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+  }
+  .has-value{
+    color: #000000b6;
+    font-family: Baskervville;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-top: 10px;
+    margin-left: 9px;
+  }
+  input[type="text" i] {
+    padding-left: 9px;
+  }
+  input[type="email" i] {
+    padding-left: 9px;
+  }
+  option{
+    color: #000;
+    font-family: Baskervville;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 9px;
+  }
+  
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+  .containerForm{
+    display: flex;
+    flex-direction: column;
+    width: 417px;
+    justify-content: center;
+    margin: auto;
+  }
+  .inputsOne{
+    display: flex;
+    flex-direction: column;
+    width: 417px;
+    gap: 21px;
+    margin-bottom: 21px;
+  }
+  .inputForm{
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+  }
+  .containerFormTwo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .containerFormPartOne{
+    display: flex;
+    flex-direction: column;
+    width: 129px;
+    gap: 16px;
+  }
+  .react-datepicker-wrapper {
+    color: #000;
+    background-color: #fff;
+    width: 129px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+  }
+  .dateContainer{
+    display: flex;
+    flex-direction: row;
+    width: 129px;
+    height: 42px;
+  }
+  .imgDate{
+    height: auto;
+  }
+  .linesDate{
+    width: 54px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 19px;
+  }
+  .lines{
+    letter-spacing: 5px;
+    color: #000;
+    font-family: Baskervville;
+    font-size: 6px;
+  }
+  .containerImgCalender{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 14px;
+  }
+  .imgCalender{
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .selectsPack{
+    width: 129px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    color: #00000073;
+    font-size: 12px;
+    font-weight: 100px;
+  }
+  .selectsPack:hover{
+    background: #000;
+    color: white;
+  }
+  .description{
+    height: 93px;
+  }
+  .containerFormPartTwo{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    gap: 16px;
+  }
+  .selectsContainer{
+    width: 270px;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .selectRes{
+    height: 31px !important;
+  }
+  .selects{
+    width: 79px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    font-size: 12px;
+  }
+  ::placeholder {
+    padding-left: 16px;
+    font-size: 12px;
+  }
+  .description::placeholder {
+    padding-left: 20px;
+    text-align: left;
+    vertical-align: top;
+    line-height: normal;
+  }
+  .options{
+    padding-left: 9px;
+    color: white;
+    margin: 100px;
+  }
+  .containerButtonBook{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 20px;
+  }
+  .buttonBook{
+    width: 116px;
+    height: 41px;
+    border-radius: 35px;
+    border: none;
+    background: linear-gradient(90deg, #FA0207, #7B1F2F);
+    color: #FFF;
+  }
+  .buttonBook:hover{
+    background: linear-gradient(90deg, #F13514, #C65173);
+  }
+  .textButtonBook{
+    font-family: Baskervville;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+  }
+  .has-value{
+    color: #000000b6;
+    font-family: Baskervville;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+  input[type="text" i] {
+    padding-left: 9px;
+  }
+  input[type="email" i] {
+    padding-left: 9px;
+  }
+  option{
+    color: #000;
+    font-family: Baskervville;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 9px;
+  }
 }

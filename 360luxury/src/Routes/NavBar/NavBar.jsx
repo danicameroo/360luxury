@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <div className="MenuNav">
-      <img src={Logo360} className="imgNav" alt="" />
+      <Link to="/" className="linkNav"><img src={Logo360} className="imgNav" alt="" /></Link>
       <div>
         <ul className="navegationNav">
           <li className={activeLink === 0 ? 'listNav active' : 'listNav'}>

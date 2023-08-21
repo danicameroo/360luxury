@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import date from '../../Images/calender.png'
-import './Form.css'
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Form = () => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [formData, setFormData] = useState({
-        Full_Name: '',
-        Email: '',
-        addressLine1: '',
-        addressLine2: '',
-        City: '',
-        State: '',
-        ZipCode: '',
-        Description: '',
-        Packages: ''
+      Full_Name: '',
+      Email: '',
+      Description: '',
+      addressLine1: '',
+      addressLine2: '',
+      City: '',
+      State: '',
+      ZipCode: '',
     });
 
   const handleChange = (e) => {
@@ -29,13 +28,12 @@ const Form = () => {
     const templateParams = {
       Full_Name: formData.Full_Name,
       Email: formData.Email,
+      Description: formData.Description,
       addressLine1: formData.addressLine1,
-        addressLine2: formData.addressLine2,
-        City: formData.City,
-        State: formData.State,
-        ZipCode: formData.ZipCode,
-        Description: formData.Description,
-        Packages: formData.Packages,
+      addressLine2: formData.addressLine2,
+      City: formData.City,
+      State: formData.State,
+      ZipCode: formData.ZipCode,
       date: selectedDate.toString(),
     };
 
@@ -67,11 +65,14 @@ const Form = () => {
           )}
         </div>
       );
+
+      const form = useRef();
+
   
 
     return(
         <div>
-            <form className='containerForm' onSubmit={handleSubmit}>
+            <form className='containerForm' ref={form} onSubmit={handleSubmit}>
                 <div className='inputsOne'>
                     <input type="text" name="Full_Name" id='name' placeholder="Full Name" className='inputForm' onChange={handleChange} required/>
                     
@@ -93,7 +94,7 @@ const Form = () => {
                                 required
                             />
                         </div>
-                        <select name="Packages" id="" className='selectsPack' onChange={handleChange} required>
+                        <select name="Packages" id="" className='selectsPack' required onChange={handleChange}>
                             <option value="" disabled selected hidden className='options'>
                                 &nbsp;  Packages
                             </option>
@@ -107,7 +108,7 @@ const Form = () => {
                         <input type="text" name="addressLine1" placeholder="Address line 1" className='inputForm' onChange={handleChange} required/>
                         <input type="text" name="addressLine2" placeholder="Address line 2" className='inputForm' onChange={handleChange} required/>
                         <div className='selectsContainer'> 
-                            <select name="City" placeholder="City" id="" className='selects selectRes' onChange={handleChange} required>
+                            <select name="City" placeholder="City" id="" className='selects' onChange={handleChange} required>
                                 <option value="" disabled selected hidden>
                                  &nbsp; City
                                 </option>
@@ -115,7 +116,7 @@ const Form = () => {
                                     <option>{item}</option>
                                 ))}
                             </select>
-                            <select name="State" placeholder="State" id="" className='selects selectRes' onChange={handleChange} required>
+                            <select name="State" placeholder="State" id="" className='selects' onChange={handleChange} required>
                                 <option value="" disabled selected hidden>
                                     &nbsp; State
                                 </option>

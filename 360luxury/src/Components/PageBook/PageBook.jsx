@@ -1,32 +1,22 @@
 import Form from "../Form/Form"
-import ArrowCarouselBook from '../../Images/ArrowCarousel.svg'
 import './PageBook.css'
-import { videos } from "../../data"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import cellphone from '../../Images/cellphone.png'
 import { useInView } from "react-intersection-observer"
+import IconsStatics from "../iconsStatics/iconsStatics"
 
 const PageBook = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
     const location = useLocation();
-    const scrollOnLoadBook = new URLSearchParams(location.search).get('scrollOnLoadBook') === 'true';
+    const scrollOnLoadBook = new URLSearchParams(location.search).get('Book') === 'true';
+    const scrollOnLoadBookVideo = new URLSearchParams(location.search).get('BookVideo') === 'true';
+    const scrollOnLoadBooking = new URLSearchParams(location.search).get('Booking') === 'true';
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
 
-const isInView = inView || false;
-
-    const handlePreviousSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide === 0 ? videos.length - 1 : prevSlide - 1));
-    };
-
-    const handleNextSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide === videos.length - 1 ? 0 : prevSlide + 1));
-        console.log(videos.length)
-        console.log(currentSlide)
-    };
-
+    const isInView = inView || false;
+    
     useEffect(() => {
         if (scrollOnLoadBook) {
         const scrollToBookSection = () => {
@@ -39,8 +29,33 @@ const isInView = inView || false;
         }
     }, [scrollOnLoadBook]);
 
+    useEffect(() => {
+        if (scrollOnLoadBookVideo) {
+        const scrollToBookVideoSection = () => {
+            const element = document.getElementById('video');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToBookVideoSection();
+        }
+    }, [scrollOnLoadBookVideo]);
+
+    useEffect(() => {
+        if (scrollOnLoadBooking) {
+        const scrollToBookingSection = () => {
+            const element = document.getElementById('form');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToBookingSection();
+        }
+    }, [scrollOnLoadBooking]);
+
     return(
         <div className="pageBook" id="book">
+            <IconsStatics />
             <div>
                 <h1 className="titleBook">how to book?</h1>
                 <div className="ContainerCarouselBook">
@@ -54,13 +69,15 @@ const isInView = inView || false;
                     </div>
                 </div>
             </div>
-            <div className="videoBook">
-                <iframe width="1058" height="592" src="https://www.youtube.com/embed/joDwDcTHvqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className="videoBook" id="video">
+                <iframe className="videoIframe" width="1058" height="592" src="https://www.youtube.com/embed/joDwDcTHvqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div>
-                <div className={`containerFormAnimation ${isInView ? 'active' : ''}`} ref={ref}>
-                <h2 className="titleForm">Booking</h2>
-                    <Form />
+                <div id="form">
+                    <div className={`containerFormAnimation ${isInView ? 'active' : ''}`} ref={ref}>
+                    <h2 className="titleForm">Booking</h2>
+                        <Form />
+                    </div>
                 </div>
             </div>
         </div>

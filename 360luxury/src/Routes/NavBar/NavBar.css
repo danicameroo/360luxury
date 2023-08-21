@@ -1,4 +1,3 @@
-
     .MenuNav{
         display: flex;
         flex-direction: row;
@@ -41,4 +40,94 @@
         text-decoration: underline;
     }
 
+@media (min-width: 300px) and (max-width: 450px) {
+    .MenuNav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 68px;
+    }
+    .imgNav{
+        width: 100px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-top: 18px;
+        margin-left: 10px;
+    }
+    .navegationNav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 38px;
+        margin-right: 10px;
+        padding-left: 0;
+    }
+    .linkNav{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    .listNav{
+        color: #FFF;
+        font-family: Baskervville;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .listNav.active {
+        color: red;
+        text-decoration: underline;
+    }
+}
 
+@media (min-width: 750px) and (max-width: 850px) {
+    .MenuNav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 68px;
+    }
+    .imgNav{
+        width: 161px;
+        height: 34px;
+        flex-shrink: 0;
+        margin-top: 18px;
+        margin-left: 80px;
+    }
+    .navegationNav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 30px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 23px;
+        margin-right: 30px;
+        padding-left: 30;
+    }
+    .linkNav{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    .listNav{
+        color: #FFF;
+        font-family: Baskervville;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .listNav.active {
+        color: red;
+        text-decoration: underline;
+    }
+}

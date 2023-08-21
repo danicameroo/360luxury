@@ -49,3 +49,99 @@
     line-height: normal;
     width: 664px;
 }
+
+@media (min-width: 300px) and (max-width: 450px) {
+    .questionsTitle{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-top: 28px;
+        margin-bottom: 44px;
+    }
+    .containerQuestions{
+        width: 270px;
+        height: 106px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: #FFF;
+        margin: auto;
+    }
+    .containerQuestions{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .titleQuestions{
+        color: #000;
+        font-family: Neothic;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: start;
+        width: 180px;
+        
+    }
+    .textQuestions{
+        color: #000;
+        font-family: 'Libre Baskerville', serif, Old Face;
+        font-size: 6px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 180px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+    .questionsTitle{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+    .containerQuestions{
+        width: 568px;
+        height: 232px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: #FFF;
+        margin: auto;
+    }
+    .containerQuestions{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .titleQuestions{
+        color: #000;
+        font-family: Neothic;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: start;
+        width: 353px;
+        
+    }
+    .textQuestions{
+        color: #000;
+        font-family: 'Libre Baskerville', serif, Old Face;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 470px;
+    }
+}

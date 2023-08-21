@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Experiences = () => {
     const [visibleImages, setVisibleImages] = useState(4);
-        const [ref, inView] = useInView({
+    const [ref, inView] = useInView({
             triggerOnce: true,
         });
     

@@ -63,3 +63,252 @@
     font-weight: 400;
     line-height: normal;
 }
+.animateArrowsizq{
+    animation: oscilarIzquierda 2s ease-in-out infinite;
+}
+.animateArrowsde{
+    animation: oscilarDerecha 2s ease-in-out infinite;
+}
+
+@keyframes oscilarIzquierda {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes oscilarDerecha {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @media (min-width: 300px) and (max-width: 450px) {
+    .containerPackage{
+      height: 331px;
+      width: 100%;
+      background: url('../../Images/bgPink.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transform: translateY(30%);
+      transition: opacity 0.5s ease, transform 1s ease;
+  }
+  .containerPackage.active {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  .containerPackageImg{
+      padding-top: 20px;
+      display: grid;
+      justify-content: center;
+  }
+  .arrowContainer{
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 280px;
+      z-index: 2;
+  }
+  .Rotate{
+      transform: scaleX(-1);
+  }
+  .textPackage{
+      margin-bottom: 0;
+      margin: auto;
+      width: 91px;
+      height: 33px;
+  }
+  .Package{
+      margin-top: 0;
+      margin: auto;
+      width: 162px;
+      height: 32px;
+  }
+  .containerPackagesButton{
+      padding-top: 20px;
+      display: grid;
+      justify-content: center;
+  }
+  .packagesButton{
+      width: 236px;
+      height: 47px;
+      flex-shrink: 0;
+      border-radius: 100px;
+      background-color: #00000085;
+      transition: background-color 0.5s;
+      margin: 10px;
+      border: none;
+  }
+  .packagesButton:hover{
+      background-color: #000000c5;
+  }
+  .packagesButtonText{
+      color: #FFF;
+      font-family: Neothic;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  }
+  .animateArrowsizq{
+      animation: oscilarIzquierda 2s ease-in-out infinite;
+  }
+  .animateArrowsde{
+      animation: oscilarDerecha 2s ease-in-out infinite;
+  }
+  .Arrow{
+    width: 49px;
+  }
+  
+  @keyframes oscilarIzquierda {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes oscilarDerecha {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 850px) {
+    .containerPackage{
+      height: 739px;
+      width: 100%;
+      background: url('../../Images/bgPink.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transform: translateY(30%);
+      transition: opacity 0.5s ease, transform 1s ease;
+  }
+  .containerPackage.active {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  .containerPackageImg{
+      padding-top: 60px;
+      display: grid;
+      justify-content: center;
+  }
+  .arrowContainer{
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 470px;
+      z-index: 2;
+  }
+  .Rotate{
+      transform: scaleX(-1);
+  }
+  .textPackage{
+      margin-bottom: 0;
+      margin: auto;
+      width: 165px;
+      height: 58px;
+  }
+  .Package{
+      margin-top: 0;
+      margin: auto;
+      width: 292px;
+      height: 59px;
+  }
+  .containerPackagesButton{
+      padding-top: 70px;
+      display: grid;
+      justify-content: center;
+  }
+  .packagesButton{
+      width: 485px;
+      height: 95px;
+      flex-shrink: 0;
+      border-radius: 100px;
+      background-color: #00000085;
+      transition: background-color 0.5s;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+  }
+  .packagesButton:hover{
+      background-color: #000000c5;
+  }
+  .linkNav{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+  .packagesButtonText{
+      color: #FFF;
+      font-family: Neothic;
+      font-size: 36px;
+      text-decoration: none;
+
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  }
+  .animateArrowsizq{
+      animation: oscilarIzquierda 2s ease-in-out infinite;
+  }
+  .animateArrowsde{
+      animation: oscilarDerecha 2s ease-in-out infinite;
+  }
+  .Arrow{
+    width: 83px;
+  }
+  
+  @keyframes oscilarIzquierda {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes oscilarDerecha {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    } 
+  }

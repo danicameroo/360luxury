@@ -1,0 +1,51 @@
+.containerIconsStatics{
+    position: relative;
+}
+.iconsStatics{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 65px;
+}
+@media (min-width: 300px) and (max-width: 450px) {
+    .containerIconsStatics{
+        position: relative;
+    }
+    .iconsStatics{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 23px;
+    }
+    .imgIconStatic{
+        width: 42px;
+        height: 42px;
+    }
+}
+@media (min-width: 750px) and (max-width: 850px) {
+    .containerIconsStatics{
+        position: relative;
+    }
+    .iconsStatics{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 23px;
+    }
+    .imgIconStatic{
+        width: 39px;
+        height: 39px;
+    }
+}

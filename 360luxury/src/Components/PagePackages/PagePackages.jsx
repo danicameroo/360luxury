@@ -4,12 +4,26 @@ import { useLocation } from 'react-router-dom'
 import Basic from './Basic'
 import Deluxe from './Deluxe'
 import Premium from './Premium'
+import IconsStatics from '../iconsStatics/iconsStatics'
 
 const PagePackages = () => {
     const location = useLocation();
-    const scrollOnLoadBasic = new URLSearchParams(location.search).get('scrollOnLoadBasic') === 'true';
     const scrollOnLoadPremium = new URLSearchParams(location.search).get('scrollOnLoadPremium') === 'true';
     const scrollOnLoadDeluxe = new URLSearchParams(location.search).get('scrollOnLoadDeluxe') === 'true';
+    const scrollOnLoadBasic = new URLSearchParams(location.search).get('scrollOnLoadBasic') === 'true';
+    const scrollOnLoadPackages = new URLSearchParams(location.search).get('Packages') === 'true';
+
+    useEffect(() => {
+        if (scrollOnLoadPackages) {
+        const scrollToPackagesSection = () => {
+            const element = document.getElementById('packages');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToPackagesSection();
+        }
+    }, [scrollOnLoadPackages]);
 
     useEffect(() => {
         if (scrollOnLoadBasic) {
@@ -22,7 +36,6 @@ const PagePackages = () => {
         scrollToBasicSection();
         }
     }, [scrollOnLoadBasic]);
-
     useEffect(() => {
         if (scrollOnLoadPremium) {
         const scrollToPremiumSection = () => {
@@ -49,25 +62,26 @@ const PagePackages = () => {
 
     return(
         <>
-            <div className="Packages">
+            <IconsStatics />
+            <div className="Packages" id='packages'>
                 <h1 className="titlePackages">Packages</h1>
                 <p className="textPackages">From the standard to the sublime, we have packages to suit every occasion and create magical moments that will be etched in your heart forever. Join us and step into a world of luxury, fun, and wonder.</p>
             </div>
-            <div className='containerPackages'>
+            <div className='containerPackages' id="basic">
                 <div className='containerTextPackages'>
-                    <h2 className='titleContainerPackages' id="basic">Basic package</h2>
+                    <h2 className='titleContainerPackages'>Basic package</h2>
                 </div>
             </div>
             <Basic />
-            <div className='containerPackages'>
+            <div className='containerPackages' id="premium">
                 <div className='containerTextPackages'>
-                    <h2 className='titleContainerPackages' id="premium">Premium package</h2>
+                    <h2 className='titleContainerPackages'>Premium package</h2>
                 </div>
             </div>
             <Premium />
-            <div className='containerPackages'>
+            <div className='containerPackages' id='deluxe'>
                 <div className='containerTextPackages'>
-                    <h2 className='titleContainerPackages' id='deluxe'>Deluxe package</h2>
+                    <h2 className='titleContainerPackages'>Deluxe package</h2>
                 </div>
             </div>
            <Deluxe />

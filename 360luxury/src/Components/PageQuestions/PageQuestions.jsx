@@ -1,9 +1,11 @@
 import {questions} from '../../data'
+import IconsStatics from '../iconsStatics/iconsStatics'
 import './PageQuestions.css'
 
 const PageQuestions = () => {
     return(
         <div>
+            <IconsStatics />
             <div>
                 <h1 className='questionsTitle'>frequent questions</h1>
             </div>

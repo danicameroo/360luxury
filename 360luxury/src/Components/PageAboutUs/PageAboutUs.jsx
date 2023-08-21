@@ -1,9 +1,54 @@
+import { useEffect } from 'react';
+import IconsStatics from '../iconsStatics/iconsStatics'
 import './PageAboutUs.css'
+import { useLocation } from 'react-router-dom';
 
 const PageAboutUs = () => {
+    const location = useLocation();
+    const scrollOnLoadAboutUs = new URLSearchParams(location.search).get('AboutUs') === 'true';
+    const scrollOnLoadMission = new URLSearchParams(location.search).get('Mission') === 'true';
+    const scrollOnLoadVision = new URLSearchParams(location.search).get('Vision') === 'true';
+    
+    useEffect(() => {
+        if (scrollOnLoadAboutUs) {
+        const scrollToAboutUsSection = () => {
+            const element = document.getElementById('about');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToAboutUsSection();
+        }
+    }, [scrollOnLoadAboutUs]);
+
+    useEffect(() => {
+        if (scrollOnLoadMission) {
+        const scrollToMissionSection = () => {
+            const element = document.getElementById('mission');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToMissionSection();
+        }
+    }, [scrollOnLoadMission]);
+
+    useEffect(() => {
+        if (scrollOnLoadVision) {
+        const scrollToVisionSection = () => {
+            const element = document.getElementById('vision');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToVisionSection();
+        }
+    }, [scrollOnLoadVision]);
+
     return(
         <div className='ContainerPageAboutUs'>
-        <div className='PageAboutUs'> 
+            <IconsStatics />
+        <div className='PageAboutUs' id='about'> 
         <div>
             <h2 className='titleAboutUs'>Who are we?</h2>
             <div className='containerTextAboutUs'>
@@ -15,14 +60,14 @@ const PageAboutUs = () => {
             </div>
             <div>
 
-            <h2 className='titleAboutUs'>Mission</h2>
+            <h2 className='titleAboutUs' id='mission'>Mission</h2>
             <div className='containerTextAboutUs'>
                 <p className='textAboutUs'>Our goal at 360 LuxuryProductions is to lead the 360 photo booth business in terms of elegance and innovation. We work to reinvent how people remember and treasure their memorable moments by transforming them into unmatched opulent and joyful experiences. Our dedication to excellence motivates us to constantly push the limits of innovation, creating industry benchmarks and imprinting our valued partners' memories forever.</p>
             </div>
             </div>
             <div>
 
-                <h2 className='titleAboutUs'>Vision</h2>
+                <h2 className='titleAboutUs' id='vision'>Vision</h2>
                 <div className='containerTextAboutUs'>
                     <p className='textAboutUs'>Our main focus is to provide the most luxurious-based experience possible, where each interaction is distinguished by excellent taste, originality, and attention to detail. We are memory architects, creating moments that will bring joy to you and your loved ones during a lifetime. We make sure that every event turns into a priceless celebration of life with the help of our creative LED props, studio-quality lighting and dedication.<br/>At 360 Luxury Productions, we constantly generate original concepts that set us apart from the competition. We thrive on originality. We work hard to make sure that each event is special and unforgettable, captivating you and your guests.</p>
                 </div>

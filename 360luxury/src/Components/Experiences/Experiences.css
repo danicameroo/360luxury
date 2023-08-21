@@ -49,3 +49,114 @@
     line-height: normal;
     text-decoration: underline;
 }
+
+@media (min-width: 300px) and (max-width: 450px) {
+
+    .containerExperiences{
+        display: block;
+        justify-content: center;
+        padding-top: 20px;
+        transform: translateY(10%);
+        transition: opacity 0.5s ease, transform 1s ease;
+    }
+    .containerExperiences.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    .titleContainerExperiences{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .imagesContainerExperiences{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .imgExperiences{
+        width: 140px;
+        height: 157px;
+        flex-shrink: 0;
+        margin: 5px;
+    }
+    .containerButtonExperiences{
+        display: flex;
+        justify-content: center;
+    }
+    .buttonImgExperiences{
+        background: none;
+        border: none;
+    }
+    .textImgExperiences{
+        text-align: center;
+        color: #FFF;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+    .containerExperiences{
+        display: block;
+        justify-content: center;
+        padding-top: 0px;
+        transform: translateY(10%);
+        transition: opacity 0.5s ease, transform 1s ease;
+    }
+    .containerExperiences.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    .titleContainerExperiences{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .imagesContainerExperiences{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+    .imgExperiences{
+        width: 357px;
+        height: 402px;
+        flex-shrink: 0;
+        margin: 6px;
+    }
+    .containerButtonExperiences{
+        display: flex;
+        justify-content: center;
+    }
+    .buttonImgExperiences{
+        background: none;
+        border: none;
+    }
+    .textImgExperiences{
+        text-align: center;
+        color: #FFF;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: underline;
+    }
+}

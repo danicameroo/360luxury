@@ -2,41 +2,66 @@ import imageOne from '../../Images/image1.png'
 import ArrowCarousel from '../../Images/ArrowCarousel.svg'
 import { imagesCarousel } from '../../data'
 import './PageHome.css'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import PackagesHome from '../PackagesHome/PackagesHome'
 import { useInView } from 'react-intersection-observer';
 import WhyUs from '../WhyUs/WhyUs'
 import Experiences from '../Experiences/Experiences'
+import IconsStatics from '../iconsStatics/iconsStatics'
 
 const PageHome = () => {
+    const location = useLocation();
+    const scrollOnLoadExperience = new URLSearchParams(location.search).get('Experiences') === 'true';
+    const scrollOnLoadGallery = new URLSearchParams(location.search).get('Gallery') === 'true';
     const [currentIndex, setCurrentIndex] = useState(0);
         const [ref, inView] = useInView({
             triggerOnce: true,
         });
     
     const isInView = inView || false;
-
+  
     const prevImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + imagesCarousel.length) % imagesCarousel.length);
-    };
-    
-    const nextImage = () => {
+      };
+      
+      const nextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesCarousel.length);
-    };
+      };
+    
+      
+    useEffect(() => {
+        if (scrollOnLoadExperience) {
+        const scrollToExperiencesSection = () => {
+            const element = document.getElementById('experiences');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToExperiencesSection();
+        }
+    }, [scrollOnLoadExperience]);
 
-    const ScrollToBook = () => {
-        window.location.href = '/booking?scrollOnLoadBook=true';
-    };
-
+    useEffect(() => {
+        if (scrollOnLoadGallery) {
+        const scrollToGallerySection = () => {
+            const element = document.getElementById('gallery');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToGallerySection();
+        }
+    }, [scrollOnLoadGallery]);
 
     return (
-        <div>
+        <div className='Home'>
+            <IconsStatics />
             <img src={imageOne} alt='' className='ImageOne' />
             <div className={`containerTextPageHome ${isInView ? 'active' : ''}`} ref={ref}>
                 <h1 className='titleContainerPageHome'>360 Luxury photo booth experience</h1>
                 <p className="textContainerPageHome">“We elevate your experience to the next level”</p>
-                <Link to="./booking">
+                <Link to="/booking?Book=true">
                 <button className="buttonContainerPageHome">
                     <p className="textButtonContainerPageHome">Book Now!</p>
                 </button>
@@ -47,22 +72,27 @@ const PageHome = () => {
             </div>
             <PackagesHome />
             <WhyUs />
-            <Experiences />
-            <div className="carouselContainer">
+            <div id='experiences'>
+                <Experiences />
+            </div>
+            <div className="carouselContainer" id='gallery'>
                 <h2 className='titleContainerCarousel'>Gallery</h2>
                 <div className="carouselImages">
                     <img
-                    src={imagesCarousel[(currentIndex - 1 + imagesCarousel.length) % imagesCarousel.length]}
+                    src={imagesCarousel[(currentIndex - 1 + imagesCarousel.length) % imagesCarousel.length].image}
                     alt=""
                     className="imgCarrusel side prev"
                     />
+                    <div className="ContainerOverlay">
+                        <p className='textOverlay'>{imagesCarousel[currentIndex].text}</p>
+                    </div>
                     <img
-                    src={imagesCarousel[currentIndex]}
+                    src={imagesCarousel[currentIndex].image}
                     alt=""
                     className="imgCarrusel center"
                     />
                     <img
-                    src={imagesCarousel[(currentIndex + 1) % imagesCarousel.length]}
+                    src={imagesCarousel[(currentIndex + 1) % imagesCarousel.length].image}
                     alt=""
                     className="imgCarrusel side next"
                     />

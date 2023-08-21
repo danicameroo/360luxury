@@ -4,7 +4,6 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
-
 .ImageOne{
     width: 100%;
     height: auto;
@@ -17,7 +16,7 @@
     align-items: center;
     height: 340px;
     transform: scale(0);
-    transition: transform 2s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 .titleContainerPageHome{
     color: #FFF;
@@ -82,8 +81,6 @@
     font-weight: 400;
     line-height: normal;
 }
-
-
 .carouselContainer {
     display: flex;
     align-items: center;
@@ -124,7 +121,7 @@
     position: absolute;
     top: 0;
     opacity: 0.5; /* Aplica opacidad a todas las imágenes */
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 13s ease-in-out;
 }  
 .carouselImages img.center {
     opacity: 1; /* La imagen en el centro se muestra con opacidad completa */
@@ -170,4 +167,557 @@
 }
 .arrowCarousel.Rotate{
     transform: scaleX(-1);
+}
+.ContainerOverlay {
+    position: absolute;
+    bottom: 37.25%;
+    left: 27.35%;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: #fff;
+    padding: 10px;
+    z-index: 9999;
+    height: 170px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.textOverlay{
+    font-size: 12px;
+    margin: 0;
+}
+@media (min-width: 1900px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 37.25%;
+        left: 31.36%;
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 170px;
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 12px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+    .ImageOne{
+        width: 100%;
+        height: 187px;
+        margin-top: 13px;
+    }
+    .containerTextPageHome{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        height: 138px;
+        transform: scale(0);
+        transition: transform 1s ease-in-out;
+    }
+    .titleContainerPageHome{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .containerTextPageHome.active {
+        transform: scale(1);
+    }
+    .textContainerPageHome{
+        color: #FFF;
+        font-family: 'Satisfy', cursive;;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 0;
+    }
+    .buttonContainerPageHome{
+        width: 80px;
+        height: 29px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background-color: #FFF;
+        border: none;
+        transition: background-color 0.5s;
+    }
+    .buttonContainerPageHome:hover{
+        background-color: #E32929;
+    }
+    .textButtonContainerPageHome{
+        color: #000;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0;
+        margin: 0;
+    }
+    .containerImgHome{
+        width: 100%;
+        height: 284px;
+        flex-shrink: 0;
+        background: url('../../Images/image2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .textImageTwoPack{
+        width: 313px;
+        height: auto;
+        color: #FFF;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .carouselContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px;
+      }
+    .titleContainerCarousel{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .titleContainerExperiences {
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 90px;
+    }  
+    .carouselImages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }  
+    .carouselImages img {
+        width: 200px; /* Ancho de 700px para cada imagen */
+        height: 150px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        opacity: 0.5; /* Aplica opacidad a todas las imágenes */
+        transition: opacity 13s ease-in-out;
+    }  
+    .carouselImages img.center {
+        opacity: 1; /* La imagen en el centro se muestra con opacidad completa */
+        z-index: 2; /* La imagen en el centro se coloca al frente */
+    }  
+    .carouselImages img.side {
+        opacity: 0.5; /* Las imágenes laterales se muestran con opacidad reducida */
+        z-index: 1; /* Las imágenes laterales se colocan detrás */
+    }  
+    .carouselImages img.prev {
+        transform: translateX(-50%) scale(0.9); /* Escala ligeramente reducida y centrada horizontalmente */
+        top: 10%;
+        left: 15%;
+    }  
+    .carouselImages img.next {
+        transform: translateX(50%) scale(0.9); /* Escala ligeramente reducida y centrada horizontalmente */
+        top: 10%;
+        right: 15%;
+    }  
+    .carouselButtons {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 250px;
+        z-index: 2;
+    }  
+    .carouselButtons button {
+        margin-bottom: 10px;
+        background: none;
+        border: none;
+    }
+    .arrowCarousel{
+        width: 15px !important;
+        height: auto !important;
+        transition: width 0.5s !important;
+    }
+    .arrowCarousel:hover{
+        width: 20px !important;
+    }
+    .arrowCarousel.Rotate{
+        transform: scaleX(-1);
+    }
+}
+@media (min-width: 300px) and (max-width: 340px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 24.25%;
+        left: 20% !important;
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 341px) and (max-width: 365px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 24.25%;
+        left: 22% !important;
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 366px) and (max-width: 374px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 24.25%;
+        left: 23% !important;
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 375px) and (max-width: 390px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 24.25%;
+        left: 24% !important; 
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 391px) and (max-width: 410px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 24.25%;
+        left: 25% !important; 
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 411px) and (max-width: 450px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 24.25%;
+        left: 26% !important; 
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 750px) and (max-width: 850px) {
+    .ImageOne{
+        width: 100%;
+        height: 390px;
+        margin-top: 20px;
+    }
+    .containerTextPageHome{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        height: 282px;
+        transform: scale(0);
+        transition: transform 1s ease-in-out;
+    }
+    .titleContainerPageHome{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-top: 40px;
+    }
+    .containerTextPageHome.active {
+        transform: scale(1);
+    }
+    .textContainerPageHome{
+        color: #FFF;
+        font-family: 'Satisfy', cursive;;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 0;
+    }
+    .buttonContainerPageHome{
+        width: 116px;
+        height: 41px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background-color: #FFF;
+        border: none;
+        transition: background-color 0.5s;
+    }
+    .buttonContainerPageHome:hover{
+        background-color: #E32929;
+    }
+    .textButtonContainerPageHome{
+        color: #000;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0;
+        margin: 0;
+    }
+    .containerImgHome{
+        width: 100%;
+        height: 416px;
+        flex-shrink: 0;
+        background: url('../../Images/image2.png');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .textImageTwoPack{
+        width: 696px;
+        height: auto;
+        color: #FFF;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .carouselContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px;
+        margin-bottom: 60px;
+      }
+    .titleContainerCarousel{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    } 
+    .carouselImages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+    }  
+    .carouselImages img {
+        width: 480px; /* Ancho de 700px para cada imagen */
+        height: 350px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        opacity: 0.5; /* Aplica opacidad a todas las imágenes */
+        transition: opacity 13s ease-in-out;
+    }  
+    .carouselImages img.center {
+        opacity: 1; /* La imagen en el centro se muestra con opacidad completa */
+        z-index: 2; /* La imagen en el centro se coloca al frente */
+    }  
+    .carouselImages img.side {
+        opacity: 0.5; /* Las imágenes laterales se muestran con opacidad reducida */
+        z-index: 1; /* Las imágenes laterales se colocan detrás */
+    }  
+    .carouselImages img.prev {
+        transform: translateX(-50%) scale(0.9); /* Escala ligeramente reducida y centrada horizontalmente */
+        top: 10%;
+        left: 5%;
+    }  
+    .carouselImages img.next {
+        transform: translateX(50%) scale(0.9); /* Escala ligeramente reducida y centrada horizontalmente */
+        top: 10%;
+        right: 5%;
+    }  
+    .carouselButtons {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 60%;
+        left: 48%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 558px;
+        z-index: 2;
+    }  
+    .carouselButtons button {
+        margin-bottom: 10px;
+        background: none;
+        border: none;
+    }
+    .arrowCarousel{
+        width: 30px !important;
+        height: auto !important;
+        transition: width 0.5s !important;
+    }
+    .arrowCarousel:hover{
+        width: 35px !important;
+    }
+    .arrowCarousel.Rotate{
+        transform: scaleX(-1);
+    }
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 12.25%;
+        left: 18.5% !important; 
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 100px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 750px) and (max-width: 799px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 12.25%;
+        left: 18.5% !important; 
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 100px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+    .ContainerOverlay {
+        position: absolute;
+        bottom: 12.25%;
+        left: 22% !important; 
+        background-color: rgba(0, 0, 0, 0.479);
+        color: #fff;
+        padding: 10px;
+        z-index: 9999;
+        height: 100px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .textOverlay{
+        font-size: 10px;
+        margin: 0;
+    }
 }

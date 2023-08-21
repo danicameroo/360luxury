@@ -77,3 +77,153 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+@media (min-width: 300px) and (max-width: 450px) {
+    .ContainerPageAboutUs{
+        position: relative;
+        overflow: hidden;
+    }
+    .ContainerPageAboutUs::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 1;
+        animation: revealBackground 2s ease forwards;
+    }
+    @keyframes revealBackground {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    .PageAboutUs{
+        background: url(../../Images/aboutUsBG.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 100%;
+        height: 810px;
+        flex-shrink: 0;
+        justify-content: center;
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+    .titleAboutUs{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .containerTextAboutUs{
+        display: flex;
+        justify-content: center;
+    }
+    .textAboutUs{
+        color: #FFF;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        width: 320px;
+        line-height: normal;
+        margin-top: 34px;
+    }
+    .textSlogan{
+        width: 212px;
+        flex-shrink: 0;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Satisfy', cursive;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media (min-width: 750px) and (max-width: 850px) {
+    .ContainerPageAboutUs{
+        position: relative;
+        overflow: hidden;
+    }
+    .ContainerPageAboutUs::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 1;
+        animation: revealBackground 2s ease forwards;
+    }
+    @keyframes revealBackground {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    .PageAboutUs{
+        background: url(../../Images/aboutUsBG.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: start center;
+        width: 100%;
+        height: 1147px;
+        flex-shrink: 0;
+        justify-content: center;
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+    .titleAboutUs{
+        color: #FFF;
+        font-family: Neothic;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .containerTextAboutUs{
+        display: flex;
+        justify-content: center;
+    }
+    .textAboutUs{
+        color: #FFF;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        width: 628px;
+        line-height: normal;
+        margin-top: 34px;
+    }
+    .textSlogan{
+        width: 597px;
+        flex-shrink: 0;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Satisfy', cursive;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
