@@ -153,8 +153,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding-top: 20px;
+  padding-left: 60px;
+  background-image: url('../../Images/calenderSelect.png'); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 28px;
+  margin-top: 2px;
 }
 input[type="text" i] {
   padding-left: 20px;
@@ -169,7 +174,231 @@ option{
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 20px;
+  padding: 120px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none; /* Aquí puedes agregar también el equivalente para navegadores Gecko (Firefox) si lo deseas */
+  appearance: none;
+  padding-right: 0px; 
+}
+.react-datepicker__header {
+  background-color: black;
+  border-bottom: none;
+  border-radius: 35px;
+  width: 268px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.react-datepicker {
+  width: 268px;
+  border-radius: 35px;
+  background-color: black;
+  border: none;
+}
+
+.react-datepicker__navigation {
+  top: 10px;
+}
+.react-datepicker__navigation--next {
+  right: 25px;
+}
+.react-datepicker__navigation--previous {
+  left: 25px;
+}
+
+.react-datepicker__current-month {
+  font-weight: bold;
+}
+
+.react-datepicker__day {
+  padding: 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.react-datepicker__current-month {
+  color: white; /* Cambia el color del texto de los meses */
+  font-size: 20px; /* Cambia el tamaño de fuente del texto de los meses */
+  font-weight: bold; /* Cambia el peso de fuente del texto de los meses */
+  font-family: Baskervville;
+}
+
+.react-datepicker__header__dropdown{
+  display: none
+}
+.react-datepicker__day-name {
+  color: white; /* Cambia el color del texto de los años */
+  font-family: Baskervville;
+  font-size: 14px;  
+  font-weight: 200px;
+  padding: 2px;
+}
+.react-datepicker__day-names {
+  width: 268px;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.react-datepicker__day:hover {
+  background-color: white;
+}
+
+.react-datepicker__day--selected {
+  background-color: white;
+  color: black;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: white !important;
+  color: black;
+}
+.selectPackages{
+  position: relative;
+  display: inline-block;
+}
+
+.selectedOptionPackages {
+  background-color: white;
+  border-radius: 15px;
+  color: #0000007a;
+  width: 248px;
+  height: 56px;
+  cursor: pointer;
+  padding-left: 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  background-image: url('../../Images/arrowSeletc.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.selectedOptionCity {
+  background-color: white;
+  border-radius: 15px;
+  color: #0000007a;
+  width: 148px;
+  height: 56px;
+  cursor: pointer;
+  padding-left: 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  background-image: url('../../Images/arrowSeletc.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.openPack{
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  width: 248px;
+  height: 56px;
+  cursor: pointer;
+  padding-left: 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  background-image: url('../../Images/arrowSelectHover.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.optionsPackages {
+  width: 268px;
+  height: 156px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  list-style: none;
+  display: flex;
+  padding: 10px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 15px;
+  margin: 0;
+  background: #000;
+}
+.optionsCity {
+  width: 148px;
+  height: 156px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  list-style: none;
+  display: flex;
+  padding: 10px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 15px;
+  margin: 0;
+  background: #000;
+  overflow: scroll;
+}
+.open{
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  width: 148px;
+  height: 56px;
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  background-image: url('../../Images/arrowSelectHover.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.optionsPackages li {
+  color: #FFF;
+  text-align: center;
+  font-family: Baskervville;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+.optionsCity li {
+  color: #FFF;
+  height: 156px;
+  text-align: center;
+  font-family: Baskervville;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+.optionsCity::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra de scroll */
+  background-color: black; /* Color de fondo de la barra de scroll */
+}
+
+/* Estilos para el thumb (el control deslizante del scroll) */
+.optionsCity::-webkit-scrollbar-thumb {
+  background-color: white; /* Color del thumb */
+  border-radius: 4px; /* Radio de borde del thumb */
+}
+
+/* Estilos para el thumb en estado hover */
+.optionsCity::-webkit-scrollbar-thumb:hover {
+  background-color: white; /* Color del thumb al pasar el cursor sobre él */
+}
+
+/* Estilos para el track (el área por donde se desplaza el thumb) */
+.optionsCity::-webkit-scrollbar-track {
+  background-color: black; /* Color del track */
+}
+
+/* Estilos para el track en estado hover */
+.optionsCity::-webkit-scrollbar-track:hover {
+  background-color: #030303; /* Color del track al pasar el cursor sobre él */
 }
 
 @media (min-width: 300px) and (max-width: 450px) {
