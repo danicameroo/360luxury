@@ -7,7 +7,6 @@ import AboutUs from './Routes/AboutUs/AboutUs';
 import Packages from './Routes/Packages/Packages';
 import Questions from './Routes/Questions/Questions';
 import Book from './Routes/Book/Book';
-import Prueba from './Components/prueba/prueba';
 
 const App = () => {
   return (
@@ -19,7 +18,6 @@ const App = () => {
           <Route path={'/packages'} element={<Packages />} />
           <Route path={'/booking'} element={<Book />} />
           <Route path={'/FAQs'} element={<Questions />} />
-          <Route path={'/prueba'} element={<Prueba />} />
         </Routes>
       <Footer />
       <End />

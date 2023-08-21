@@ -727,6 +727,7 @@ select {
     border-radius: 15px;
     margin: 0;
     background: #000;
+    z-index: 9999;
   }
   .optionsCity {
     width: 100px;
@@ -744,6 +745,7 @@ select {
     margin: 0;
     background: #000;
     overflow: scroll;
+    z-index: 9999;
   }
   .open{
     color: white;

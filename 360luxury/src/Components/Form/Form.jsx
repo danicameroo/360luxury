@@ -78,7 +78,7 @@ const Form = () => {
         console.log(result.text);
         toast.success('Form submitted successfully!', {
           position: toast.POSITION.TOP_CENTER,
-          autoClose: 3000, // 3 seconds
+          autoClose: 1000, // 3 seconds
           hideProgressBar: true,
           closeOnClick: true,
           pauseOnHover: true,
