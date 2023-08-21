@@ -44,6 +44,7 @@
   flex-direction: row;
   width: 268px;
   height: 56px;
+  cursor: pointer;
 }
 .imgDate{
   height: auto;
@@ -400,7 +401,6 @@ select {
 .optionsCity::-webkit-scrollbar-track:hover {
   background-color: #030303; /* Color del track al pasar el cursor sobre él */
 }
-
 @media (min-width: 300px) and (max-width: 450px) {
   .containerForm{
     display: flex;
@@ -559,14 +559,19 @@ select {
     margin: 0;
   }
   .has-value{
-    color: #000000b6;
+    color: #000;
     font-family: Baskervville;
     font-size: 6px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    margin-top: 10px;
-    margin-left: 9px;
+    padding-top: 5px;
+    padding-left: 23px;
+    background-image: url('../../Images/calenderPhone.png'); 
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 11px;
+    margin-top: 0px;
   }
   input[type="text" i] {
     padding-left: 9px;
@@ -582,6 +587,225 @@ select {
     font-weight: 400;
     line-height: normal;
     padding: 9px;
+  }
+  .react-datepicker__header {
+    background-color: black;
+    border-bottom: none;
+    border-radius: 35px;
+    width: 268px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .react-datepicker {
+    width: 268px;
+    border-radius: 35px;
+    background-color: black;
+    border: none;
+  }
+  
+  .react-datepicker__navigation {
+    top: 10px;
+  }
+  .react-datepicker__navigation--next {
+    right: 25px;
+  }
+  .react-datepicker__navigation--previous {
+    left: 25px;
+  }
+  
+  .react-datepicker__current-month {
+    font-weight: bold;
+  }
+  
+  .react-datepicker__day {
+    padding: 2px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .react-datepicker__current-month {
+    color: white; /* Cambia el color del texto de los meses */
+    font-size: 20px; /* Cambia el tamaño de fuente del texto de los meses */
+    font-weight: bold; /* Cambia el peso de fuente del texto de los meses */
+    font-family: Baskervville;
+  }
+  
+  .react-datepicker__header__dropdown{
+    display: none
+  }
+  .react-datepicker__day-name {
+    color: white; /* Cambia el color del texto de los años */
+    font-family: Baskervville;
+    font-size: 14px;  
+    font-weight: 200px;
+    padding: 2px;
+  }
+  .react-datepicker__day-names {
+    width: 268px;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: white;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: white;
+    color: black;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: white !important;
+    color: black;
+  }
+
+  .selectPackages{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .selectedOptionPackages {
+    background-color: white;
+    border-radius: 15px;
+    color: #0000007a;
+    width: 66px;
+    height: 27px;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectPhone.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .selectedOptionCity {
+    background-color: white;
+    border-radius: 15px;
+    color: #0000007a;
+    width: 37px;
+    height: 23px;
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectPhone.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .openPack{
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    width: 66px;
+    height: 27px;
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectPhoneHover.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .optionsPackages {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    list-style: none;
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    margin: 0;
+    background: #000;
+  }
+  .optionsCity {
+    width: 100px;
+    height:150px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    list-style: none;
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    margin: 0;
+    background: #000;
+    overflow: scroll;
+  }
+  .open{
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    width: 37px;
+    height: 23px;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectPhoneHover.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  
+  .optionsPackages li {
+    color: #FFF;
+    text-align: center;
+    font-family: Baskervville;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+  }
+  .optionsCity li {
+    color: #FFF;
+    height: 156px;
+    text-align: center;
+    font-family: Baskervville;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+  }
+  .optionsCity::-webkit-scrollbar {
+    width: 2px; /* Ancho de la barra de scroll */
+    background-color: black; /* Color de fondo de la barra de scroll */
+  }
+  
+  /* Estilos para el thumb (el control deslizante del scroll) */
+  .optionsCity::-webkit-scrollbar-thumb {
+    background-color: white; /* Color del thumb */
+    border-radius: 4px; /* Radio de borde del thumb */
+  }
+  
+  /* Estilos para el thumb en estado hover */
+  .optionsCity::-webkit-scrollbar-thumb:hover {
+    background-color: white; /* Color del thumb al pasar el cursor sobre él */
+  }
+  
+  /* Estilos para el track (el área por donde se desplaza el thumb) */
+  .optionsCity::-webkit-scrollbar-track {
+    background-color: black; /* Color del track */
+  }
+  
+  /* Estilos para el track en estado hover */
+  .optionsCity::-webkit-scrollbar-track:hover {
+    background-color: #030303; /* Color del track al pasar el cursor sobre él */
   }
   
 }
@@ -632,6 +856,7 @@ select {
     flex-direction: row;
     width: 129px;
     height: 42px;
+    cursor: pointer;
   }
   .imgDate{
     height: auto;
@@ -743,14 +968,20 @@ select {
     margin: 0;
   }
   .has-value{
-    color: #000000b6;
+    color: #000;
     font-family: Baskervville;
     font-size: 12px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    margin-top: 16px;
-    margin-left: 16px;
+    padding-top: 16px;
+    padding-left: 37px;
+    background-image: url('../../Images/calenderSelect.png'); 
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 35px;
+    height: 28px;
+    margin-top: 0px;
   }
   input[type="text" i] {
     padding-left: 9px;
@@ -766,5 +997,226 @@ select {
     font-weight: 400;
     line-height: normal;
     padding: 9px;
+  }
+  .react-datepicker__header {
+    background-color: black;
+    border-bottom: none;
+    border-radius: 35px;
+    width: 268px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .react-datepicker {
+    width: 268px;
+    border-radius: 35px;
+    background-color: black;
+    border: none;
+  }
+  
+  .react-datepicker__navigation {
+    top: 10px;
+  }
+  .react-datepicker__navigation--next {
+    right: 25px;
+  }
+  .react-datepicker__navigation--previous {
+    left: 25px;
+  }
+  
+  .react-datepicker__current-month {
+    font-weight: bold;
+  }
+  
+  .react-datepicker__day {
+    padding: 2px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .react-datepicker__current-month {
+    color: white; /* Cambia el color del texto de los meses */
+    font-size: 20px; /* Cambia el tamaño de fuente del texto de los meses */
+    font-weight: bold; /* Cambia el peso de fuente del texto de los meses */
+    font-family: Baskervville;
+  }
+  
+  .react-datepicker__header__dropdown{
+    display: none
+  }
+  .react-datepicker__day-name {
+    color: white; /* Cambia el color del texto de los años */
+    font-family: Baskervville;
+    font-size: 14px;  
+    font-weight: 200px;
+    padding: 2px;
+  }
+  .react-datepicker__day-names {
+    width: 268px;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: white;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: white;
+    color: black;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: white !important;
+    color: black;
+  }
+
+  .selectPackages{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .selectedOptionPackages {
+    background-color: white;
+    border-radius: 15px;
+    color: #0000007a;
+    width: 117px;
+    height: 42px;
+    cursor: pointer;
+    padding-left: 15px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectTablet.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .selectedOptionCity {
+    background-color: white;
+    border-radius: 15px;
+    color: #0000007a;
+    width: 69px;
+    height: 36px;
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectTablet.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .openPack{
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    width: 117px;
+    height: 42px;
+    cursor: pointer;
+    padding-left: 15px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectHoverTablet.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .optionsPackages {
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    list-style: none;
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    margin: 0;
+    background: #000;
+    z-index: 9999;
+  }
+  .optionsCity {
+    width: 120px;
+    height:150px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    list-style: none;
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    margin: 0;
+    background: #000;
+    overflow: scroll;
+    z-index: 9999;
+  }
+  .open{
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    width: 69px;
+    height: 36px;
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background-image: url('../../Images/arrowSelectHoverTablet.png'); /* Reemplaza con la ruta de tu imagen de flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  
+  .optionsPackages li {
+    color: #FFF;
+    text-align: center;
+    font-family: Baskervville;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+  }
+  .optionsCity li {
+    color: #FFF;
+    height: 156px;
+    text-align: center;
+    font-family: Baskervville;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+  }
+  .optionsCity::-webkit-scrollbar {
+    width: 2px; /* Ancho de la barra de scroll */
+    background-color: black; /* Color de fondo de la barra de scroll */
+  }
+  
+  /* Estilos para el thumb (el control deslizante del scroll) */
+  .optionsCity::-webkit-scrollbar-thumb {
+    background-color: white; /* Color del thumb */
+    border-radius: 4px; /* Radio de borde del thumb */
+  }
+  
+  /* Estilos para el thumb en estado hover */
+  .optionsCity::-webkit-scrollbar-thumb:hover {
+    background-color: white; /* Color del thumb al pasar el cursor sobre él */
+  }
+  
+  /* Estilos para el track (el área por donde se desplaza el thumb) */
+  .optionsCity::-webkit-scrollbar-track {
+    background-color: black; /* Color del track */
+  }
+  
+  /* Estilos para el track en estado hover */
+  .optionsCity::-webkit-scrollbar-track:hover {
+    background-color: #030303; /* Color del track al pasar el cursor sobre él */
   }
 }

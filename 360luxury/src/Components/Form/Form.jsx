@@ -4,6 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import date from '../../Images/calender.png'
 import './Form.css'
 import emailjs from '@emailjs/browser';
+import { Slide, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
     const [selectedDate, setSelectedDate] = useState(null);
@@ -55,6 +57,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const toastId = 'form-submission-toast';
 
     const templateParams = {
       Full_Name: formData.Full_Name,
@@ -73,8 +76,22 @@ const Form = () => {
     emailjs.send('service_vw4zizt', 'template_vm44lie', templateParams, 'EEhrbNotEY4A3jsIG')
       .then((result) => {
         console.log(result.text);
+        toast.success('Form submitted successfully!', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 3000, // 3 seconds
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          toastId,
+          transition: Slide
+        });
       }, (error) => {
         console.log(error.text);
+        toast.error('Failed to submit the form. Please try again later.', {
+          position: toast.POSITION.TOP_RIGHT,
+          toastId
+        });
       });
   };
 
@@ -86,7 +103,7 @@ const Form = () => {
           {value ? (
             value
           ) : (
-            <div className='dateContainer'>
+            <div className='dateContainer' >
               <div className='containerImgCalender'>
                 <img src={date} alt="" className='imgCalender' />
               </div>
@@ -97,11 +114,18 @@ const Form = () => {
           )}
         </div>
       );
+
+      const handleMouseLeave = () => {
+        setIsOpen(false);
+        setIsOpenTwo(false);
+        setIsOpenThree(false);
+      };
   
 
     return(
         <div>
             <form className='containerForm' onSubmit={handleSubmit}>
+            <div className="toast-container"><ToastContainer limit={2}/></div>
                 <div className='inputsOne'>
                     <input type="text" name="Full_Name" id='name' placeholder="Full Name" className='inputForm' onChange={handleChange} required/>
                     
@@ -124,11 +148,11 @@ const Form = () => {
                             />
                         </div>
                         <div name="Packages" className={`selectPackages ${isOpen ? 'openPack' : ''}`}>
-                          <div className={`selectedOptionPackages ${isOpen ? 'openPack' : ''}`} onClick={toggleOpen}>
+                          <div className={`selectedOptionPackages ${isOpen ? 'openPack' : ''}`} onClick={toggleOpen} >
                             {selectedPackages ? selectedPackages : 'Packages'}
                           </div>
                           {isOpen && (
-                            <ul className="optionsPackages">
+                            <ul className="optionsPackages" onMouseLeave={handleMouseLeave}>
                               <li onClick={() => handleOptionPackagesClick('Basic')}>Basic</li>
                               <li onClick={() => handleOptionPackagesClick('Premium')}>Premium</li>
                               <li onClick={() => handleOptionPackagesClick('Deluxe')}>Deluxe</li>
@@ -141,12 +165,12 @@ const Form = () => {
                         <input type="text" name="addressLine1" placeholder="Address line 1" className='inputForm' onChange={handleChange} required/>
                         <input type="text" name="addressLine2" placeholder="Address line 2" className='inputForm' onChange={handleChange} required/>
                         <div className='selectsContainer'> 
-                            <div name="City" className={`selectPackages ${isOpenTwo ? 'open' : ''}`}>
+                            <div name="City" className={`selectPackages ${isOpenTwo ? 'open' : ''}`} >
                               <div className={`selectedOptionCity ${isOpenTwo ? 'open' : ''}`} onClick={toggleOpenTwo}>
                                 {selectedCity ? selectedCity : 'City'}
                               </div>
                               {isOpenTwo && (
-                                <ul className="optionsCity">
+                                <ul className="optionsCity" onMouseLeave={handleMouseLeave}>
                                   {City.map((item) =>(
                                     <li onClick={() => handleOptionCityClick(item)}>{item}</li>
                                   ))}
@@ -158,7 +182,7 @@ const Form = () => {
                                 {selectedState ? selectedState : 'State'}
                               </div>
                               {isOpenThree && (
-                                <ul className="optionsCity">
+                                <ul className="optionsCity" onMouseLeave={handleMouseLeave}>
                                   {States.map((item) =>(
                                     <li onClick={() => handleOptionStateClick(item)}>{item}</li>
                                   ))}
