@@ -2,10 +2,16 @@ import ExpOne from './Images/Experiences1.png'
 import ExpTwo from './Images/Experiences2.png'
 import ExpThree from './Images/Experiences3.png'
 import ExpFour from './Images/Experiences4.png'
+import ExpFive from './Images/Experiences5.png'
+import ExpSix from './Images/Experiences6.png'
+import ExpSeven from './Images/Experiences7.png'
+import ExpEight from './Images/Experiences8.png'
 import CarrOne from './Images/Carrusel1.jpg'
 import CarrTwo from './Images/Carrusel2.jpg'
+import CarrThree from './Images/Carrusel3.png'
+import CarrFour from './Images/Carrusel5.png'
 
-export const imagesExperiences = [ ExpOne, ExpTwo, ExpThree, ExpFour, ExpOne, ExpTwo, ExpThree, ExpFour, ExpOne];
+export const imagesExperiences = [ ExpOne, ExpTwo, ExpThree, ExpFour, ExpFive, ExpSix, ExpSeven, ExpEight];
 
 export const imagesCarousel = [ 
     {
@@ -15,7 +21,15 @@ export const imagesCarousel = [
     { 
         image: CarrOne,
         text: "Segundo texto"
-    }
+    },
+    { 
+        image: CarrThree,
+        text: "Tercer texto"
+    },
+    { 
+        image: CarrFour,
+        text: "Cuarto texto"
+    },
 ];
 
 export const questions = [

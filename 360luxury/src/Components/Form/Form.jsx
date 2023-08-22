@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Form = () => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [formData, setFormData] = useState({
@@ -23,6 +24,7 @@ const Form = () => {
   const [selectedPackages, setSelectedPackages] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedState, setSelectedState] = useState('');
+
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -73,7 +75,7 @@ const Form = () => {
     };
 
     // Envía el formulario usando EmailJS
-    emailjs.send('service_vw4zizt', 'template_vm44lie', templateParams, 'EEhrbNotEY4A3jsIG')
+    emailjs.send('service_b2z5wkq', 'template_087hmqb', templateParams, 'xDzGp2PAwaN5tfpb1')
       .then((result) => {
         console.log(result.text);
         toast.success('Form submitted successfully!', {
@@ -123,11 +125,11 @@ const Form = () => {
   
 
     return(
-        <div>
+        <div className='contFormWidth'>
             <form className='containerForm' onSubmit={handleSubmit}>
             <div className="toast-container"><ToastContainer limit={2}/></div>
                 <div className='inputsOne'>
-                    <input type="text" name="Full_Name" id='name' placeholder="Full Name" className='inputForm' onChange={handleChange} required/>
+                    <input type="text" name="Full_Name" id='name' placeholder="Full Name" className='inputForm' aria-required="true" autocapitalize="off" autocorrect="off" onChange={handleChange} required/>
                     
                     <input type="email" name="Email" placeholder="Email" onChange={handleChange} className='inputForm' required/>
                 </div>

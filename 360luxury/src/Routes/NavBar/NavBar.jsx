@@ -23,37 +23,40 @@ const NavBar = () => {
   };
 
   return (
+    <div className='positionNav'>
+
     <div className="MenuNav">
       <Link to="/" className="linkNav"><img src={Logo360} className="imgNav" alt="" /></Link>
       <div>
         <ul className="navegationNav">
           <li className={activeLink === 0 ? 'listNav active' : 'listNav'}>
-            <Link to="/" className="linkNav" onClick={() => handleClick(0)}>
+            <Link to="/?Home=true" className="linkNav" onClick={() => handleClick(0)}>
               Home
             </Link>
           </li>
           <li className={activeLink === 1 ? 'listNav active' : 'listNav'}>
-            <Link to="/aboutUs" className="linkNav" onClick={() => handleClick(1)}>
+            <Link to="/aboutUs?AboutUs=true" className="linkNav" onClick={() => handleClick(1)}>
               About Us
             </Link>
           </li>
           <li className={activeLink === 2 ? 'listNav active' : 'listNav'}>
-            <Link to="/packages" className="linkNav" onClick={() => handleClick(2)}>
+            <Link to="/packages?Packages=true" className="linkNav" onClick={() => handleClick(2)}>
               Packages
             </Link>
           </li>
           <li className={activeLink === 3 ? 'listNav active' : 'listNav'}>
-            <Link to="/booking" className="linkNav" onClick={() => handleClick(3)}>
+            <Link to="/booking?Book=true" className="linkNav" onClick={() => handleClick(3)}>
               Book Now!
             </Link>
           </li>
           <li className={activeLink === 4 ? 'listNav active' : 'listNav'}>
-            <Link to="/FAQs" className="linkNav" onClick={() => handleClick(4)}>
+            <Link to="/FAQs?Question=true" className="linkNav" onClick={() => handleClick(4)}>
               FAQ's
             </Link>
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 };

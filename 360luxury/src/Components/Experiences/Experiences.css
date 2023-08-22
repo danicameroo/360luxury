@@ -2,7 +2,7 @@
     display: block;
     justify-content: center;
     padding-top: 60px;
-    transform: translateY(30%);
+    transform: translateY(10%);
     transition: opacity 0.5s ease, transform 1s ease;
 }
 .containerExperiences.active {

@@ -1,10 +1,26 @@
+import { useLocation } from 'react-router-dom';
 import {questions} from '../../data'
 import IconsStatics from '../iconsStatics/iconsStatics'
 import './PageQuestions.css'
+import { useEffect } from 'react';
 
 const PageQuestions = () => {
+    const location = useLocation();
+    const scrollOnLoadQuestion = new URLSearchParams(location.search).get('Question') === 'true';
+
+    useEffect(() => {
+        if (scrollOnLoadQuestion) {
+        const scrollToQuestionSection = () => {
+            const element = document.getElementById('question');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToQuestionSection();
+        }
+    }, [scrollOnLoadQuestion]);
     return(
-        <div>
+        <div className='positionQuestion' id='question'>
             <IconsStatics />
             <div>
                 <h1 className='questionsTitle'>frequent questions</h1>

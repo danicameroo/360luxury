@@ -4,6 +4,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
+.Home{
+    padding-top: 100px;
+}
 .ImageOne{
     width: 100%;
     height: auto;
@@ -210,6 +213,9 @@
 }
 
 @media (min-width: 300px) and (max-width: 450px) {
+    .Home{
+        padding-top: 50px;
+    }
     .ImageOne{
         width: 100%;
         height: 187px;
@@ -502,6 +508,9 @@
     }
 }
 @media (min-width: 750px) and (max-width: 850px) {
+    .Home{
+        padding-top: 80px;
+    }
     .ImageOne{
         width: 100%;
         height: 390px;

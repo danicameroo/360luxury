@@ -6,6 +6,7 @@
 }
 
 .ContainerPageAboutUs{
+    padding-top: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -82,6 +83,7 @@
     .ContainerPageAboutUs{
         position: relative;
         overflow: hidden;
+        padding-top: 50px;
     }
     .ContainerPageAboutUs::before {
         content: "";
@@ -156,6 +158,7 @@
     .ContainerPageAboutUs{
         position: relative;
         overflow: hidden;
+        padding-top: 80px;
     }
     .ContainerPageAboutUs::before {
         content: "";

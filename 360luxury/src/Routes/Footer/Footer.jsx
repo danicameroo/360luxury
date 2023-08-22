@@ -17,7 +17,7 @@ const Footer = () => {
                 <Link className='linkNav' to="/aboutUs?AboutUs=true"><p className='textTextMapFooter'>About Us</p></Link>
                 <Link className='linkNav' to="/packages?Packages=true"><p className='textTextMapFooter'>Packages</p></Link>
                 <Link className='linkNav' to="/booking?Book=true"><p className='textTextMapFooter'>Book Now!</p></Link>
-                <p className='textTextMapFooter'>Contact Us</p>
+                <Link  className='linkNav' to="tel:+16466001306"><p className='textTextMapFooter'>Contact Us</p></Link>
             </div>
             <div className='textMapFooter'>
                 <p className='titleTextMapFooter'>Home</p>
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
             <div className='textMapFooter'>
                 <p className='titleTextMapFooter'>Contact</p>
-                <p className='textTextMapFooter'>Contact Information</p>
+                <Link  className='linkNav' to="tel:+16466001306"><p className='textTextMapFooter'>Contact Information</p></Link>
                 <Link to="https://instagram.com/360luxuryproductions?igshid=OGQ5ZDc2ODk2ZA==" className='linkNav' target="_blank"><p className='textTextMapFooter'>Instagram Profile</p></Link>
                 <Link to="https://maps.app.goo.gl/xAhKCnyDvEQEEDf56?g_st=iw" className='linkNav' target="_blank"><p className='textTextMapFooter'>Google Maps Profile</p></Link>
                 <Link to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzBWKlkdckbKTLJCjMQXLBVCXQdktTztxNTtTLttPHzQrgNKkqXFrTJbPJfTKbzqVFWTBKp" className='linkNav' target="_blank"><p className='textTextMapFooter'>Email</p></Link>

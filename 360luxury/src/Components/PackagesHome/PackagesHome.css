@@ -51,9 +51,11 @@
     transition: background-color 0.5s;
     margin: 30px;
     border: none;
+    transition: transform 0.5s ease;
 }
 .packagesButton:hover{
     background-color: #000000c5;
+    transform: scale(1.1);
 }
 .packagesButtonText{
     color: #FFF;
@@ -152,9 +154,11 @@
       transition: background-color 0.5s;
       margin: 10px;
       border: none;
+      transition: transform 0.5s ease;
   }
   .packagesButton:hover{
       background-color: #000000c5;
+      transform: scale(1.1);
   }
   .packagesButtonText{
       color: #FFF;
@@ -260,9 +264,11 @@
       justify-content: center;
       align-items: center;
       border: none;
+      transition: transform 0.5s ease;
   }
   .packagesButton:hover{
       background-color: #000000c5;
+      transform: scale(1.1);
   }
   .linkNav{
     text-decoration: none;

@@ -14,6 +14,7 @@ const PageHome = () => {
     const location = useLocation();
     const scrollOnLoadExperience = new URLSearchParams(location.search).get('Experiences') === 'true';
     const scrollOnLoadGallery = new URLSearchParams(location.search).get('Gallery') === 'true';
+    const scrollOnLoadHome = new URLSearchParams(location.search).get('Home') === 'true';
     const [currentIndex, setCurrentIndex] = useState(0);
         const [ref, inView] = useInView({
             triggerOnce: true,
@@ -30,6 +31,18 @@ const PageHome = () => {
       };
     
       
+    useEffect(() => {
+        if (scrollOnLoadHome) {
+        const scrollToHomeSection = () => {
+            const element = document.getElementById('home');
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+        scrollToHomeSection();
+        }
+    }, [scrollOnLoadHome]);
+
     useEffect(() => {
         if (scrollOnLoadExperience) {
         const scrollToExperiencesSection = () => {
@@ -55,7 +68,7 @@ const PageHome = () => {
     }, [scrollOnLoadGallery]);
 
     return (
-        <div className='Home'>
+        <div className='Home' id='home'>
             <IconsStatics />
             <img src={imageOne} alt='' className='ImageOne' />
             <div className={`containerTextPageHome ${isInView ? 'active' : ''}`} ref={ref}>

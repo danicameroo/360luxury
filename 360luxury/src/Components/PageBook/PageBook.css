@@ -1,3 +1,6 @@
+.positionPageBook{
+    padding-top: 100px;
+}
 .pageBook{
     display: flex;
     flex-direction: column;
@@ -115,6 +118,9 @@
 }
 
 @media (min-width: 300px) and (max-width: 450px) {
+    .positionPageBook{
+        padding-top: 50px;
+    }
     .pageBook{
         display: flex;
         flex-direction: column;
@@ -202,6 +208,9 @@
 }
 
 @media (min-width: 750px) and (max-width: 850px) {
+    .positionPageBook{
+        padding-top: 80px;
+    }
     .pageBook{
         display: flex;
         flex-direction: column;

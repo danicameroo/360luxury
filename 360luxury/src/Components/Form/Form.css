@@ -409,6 +409,9 @@ select {
     justify-content: center;
     margin: auto;
   }
+  .contFormWidth{
+    touch-action: none;
+  }
   .inputsOne{
     display: flex;
     flex-direction: column;
